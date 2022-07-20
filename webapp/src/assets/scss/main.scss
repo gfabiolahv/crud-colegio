@@ -1,0 +1,121 @@
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+}
+
+ul.menu {
+    li {
+        list-style: none;
+        margin-top: 5px;
+        &.submenu {
+            ul {
+                padding-left: 1rem;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #424549;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: #f33501;
+        }
+    }
+    span {
+        color: #a7a8a8;
+    }
+}
+
+header.header-app {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6!important;
+    padding: 0 20px;
+    a.logo {
+        display: block;
+        height: 40px;
+        width: 202px;
+        margin: 15px 15px 15px 0;
+        img {
+            height: 40px;
+        }
+    }
+    .btn-secondary {
+        background-color: transparent !important;
+        color: #f33501 !important;
+        border-color: transparent;
+        &:focus {
+            border: none;
+            box-shadow: none !important;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    margin-top: 10px;
+    a {
+        color: #f33501;
+        text-decoration: none;
+    }
+}
+
+footer {
+    display: flex;
+    padding: 25px 15px 0;
+    margin-top: 20px;
+    justify-content: space-between;
+    border-top: 1px solid #dee2e6!important;
+    p {
+        color: #556666;
+    }
+    li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 5px;
+        a {
+            text-decoration: none;
+            color: #556666;
+            font-size: 1.5em;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: #f33501;
+            }
+        }
+    }
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.ml-15 {
+    margin-left: 15px !important;
+}

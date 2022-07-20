@@ -1,0 +1,41 @@
+#home {
+    height: 75vh;
+    padding-top: 120px;
+    h2 {
+        color: #f33501;
+    }
+    h5 {
+        font-weight: normal;
+        color: #556666;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            display: block;
+            margin: 0 10px;
+            color: #f33501;
+            min-width: 120px;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border: 3px solid #f33501;
+            transition: all 0.3s ease-in-out;
+            span {
+                display: block;
+                margin-top: 5px;
+                font-size: 24px;
+                font-weight: 500;
+                color: #556666;
+            }
+            &:hover {
+                background-color: #f33501;
+                color: #fff;
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

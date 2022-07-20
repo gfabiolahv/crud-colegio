@@ -1,0 +1,39 @@
+version: '3.3'
+services:
+  db:
+    build:
+      context: ./mysql-scripts
+      dockerfile: Dockerfile 
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: viaronet_test
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: devpass
+    ports:
+      - 52000:3306
+  restapi:
+    build:
+      context: ./php
+      dockerfile: Dockerfile 
+    container_name: restapi
+    depends_on: 
+      - db
+    volumes:
+      - ./php:/var/www/html/
+    ports: 
+      - 8000:80
+  web:
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    container_name: web
+    depends_on:
+      - restapi
+    volumes:
+      - ./webapp:/usr/src/app/webapp
+      - /usr/src/app/webapp/node_modules
+    ports:
+      - 8080:8080
